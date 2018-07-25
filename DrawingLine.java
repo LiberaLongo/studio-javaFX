@@ -1,8 +1,8 @@
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.shape.Line;
 import javafx.stage.Stage;
+import javafx.scene.shape.Line;
 
 public class DrawingLine extends Application {
 	@Override

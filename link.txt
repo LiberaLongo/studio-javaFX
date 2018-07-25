@@ -1,0 +1,18 @@
+Tutti i programmi di questo Java Project chiamato tutorial JavaFX
+sono presi da questo sito:
+https://www.tutorialspoint.com/javafx/
+
+Tutti i miei tentativi di fare programmi di cui il codice
+è solo mio verranno inseriti su github
+
+git clone https://github.com/LiberaLongo/studio-javaFX.git
+
+che verrà aggiornato con i comandi:
+git pull
+git add .
+git commit -m "commento"
+git push origin master
+
+ho anche scoperto che posso anche (in teoria)
+javac nomefile.java		per compilare
+java nomefile			per eseguire

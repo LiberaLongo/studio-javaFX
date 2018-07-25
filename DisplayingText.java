@@ -1,10 +1,10 @@
 import javafx.application.Application;
-//import javafx.collections.ObservableList;
 import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+//import javafx.collections.ObservableList;
 
 public class DisplayingText extends Application {
 	@Override
