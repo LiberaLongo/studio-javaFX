@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 public class nomefile extends Application {
         @Override
         public void start(Stage primaryStage) throws Exception {
-                //creating a Group object
+                //Creating a Group object
                 Group root = new Group();
                 //Creating a Scene by passing the group object, height and width
                 Scene scene = new Scene(root ,600, 300);
