@@ -18,34 +18,34 @@ public class Topolino extends Application {
 		//testa
 		Double raggioTesta = 200.0;
 		//orecchie
-		Double distanzaOrecchie = raggioTesta*3/4;
-		Double altezzaOrecchie = raggioTesta*1;
-		Double raggioOrecchie = raggioTesta*1/2;
+		Double distanzaOrecchie = raggioTesta*1/1;
+		Double altezzaOrecchie = raggioTesta*1/1;
+		Double raggioOrecchie = raggioTesta*2/3;
 		//orbite
 		Double distanzaOrbite = raggioTesta*1/4;
-		Double radiusXOrbite = raggioTesta*1/3;
-		Double radiusYOrbite = raggioTesta*1/2;
+		Double radiusXOrbite = raggioTesta*2/5;
+		Double radiusYOrbite = raggioTesta*2/3;
 		//occhi
-		Double distanzaOcchi = distanzaOrbite;
+		Double distanzaOcchi = distanzaOrbite - distanzaOrbite*1/10;
 		Double radiusXOcchi = radiusXOrbite*1/2;
-		Double radiusYOcchi = radiusYOrbite*1/2;
+		Double radiusYOcchi = radiusYOrbite*2/3;
 		//pupille
-		Double distanzaPupille = distanzaOcchi;
+		Double distanzaPupille = distanzaOcchi*3/4;
 		Double radiusXPupille = radiusXOcchi*1/2;
 		Double radiusYPupille = radiusYOcchi*1/2;
 		//bocca
-		Double altezzaBocca = raggioTesta*1/2;
-		Double radiusXBocca = raggioTesta*1/2;
+		Double altezzaBocca = raggioTesta*2/3;
+		Double radiusXBocca = raggioTesta*2/3;
 		Double radiusYBocca = raggioTesta*1/2;
 		//naso
-		Double altezzaNaso = raggioTesta - altezzaBocca;
+		Double altezzaNaso = raggioTesta - radiusYBocca*3/2;
 		Double radiusXNaso = raggioTesta*1/8;
 		Double radiusYNaso = raggioTesta*1/10;
 
 		//Disegno del soggetto
 		Circle cranio = new Circle(x, y, raggioTesta);
-		Circle orecchioSinistro = new Circle(x-altezzaOrecchie, y-distanzaOrecchie, raggioOrecchie);
-		Circle orecchioDestro = new Circle(x+altezzaOrecchie, y-distanzaOrecchie, raggioOrecchie);
+		Circle orecchioSinistro = new Circle(x-distanzaOrecchie, y-altezzaOrecchie, raggioOrecchie);
+		Circle orecchioDestro = new Circle(x+distanzaOrecchie, y-altezzaOrecchie, raggioOrecchie);
 		Shape orecchie = Shape.union(orecchioSinistro, orecchioDestro);
 		Shape testa = Shape.union(cranio, orecchie);
 		testa.setFill(Color.BLACK);
@@ -53,7 +53,7 @@ public class Topolino extends Application {
 		Ellipse orbitaSinistra = new Ellipse(x-distanzaOrbite, y, radiusXOrbite, radiusYOrbite);
 		Ellipse orbitaDestra = new Ellipse(x+distanzaOrbite, y, radiusXOrbite, radiusYOrbite);
 		Shape orbite = Shape.union(orbitaSinistra, orbitaDestra);
-		orbite.setFill(Color.PINK);
+		orbite.setFill(Color.SANDYBROWN);
 		//occhi
 		Ellipse occhioSinistro = new Ellipse(x-distanzaOcchi, y, radiusXOcchi, radiusYOcchi);
 		Ellipse occhioDestro = new Ellipse(x+distanzaOcchi, y, radiusXOcchi, radiusYOcchi);
@@ -64,9 +64,10 @@ public class Topolino extends Application {
 		Ellipse pupillaDestra = new Ellipse(x+distanzaPupille, y, radiusXPupille, radiusYPupille);
 		Shape pupille = Shape.union(pupillaSinistra, pupillaDestra);
 		pupille.setFill(Color.BLACK);
+		pupille.setStrokeWidth(2);
 		//bocca
 		Ellipse bocca = new Ellipse(x, y+altezzaBocca, radiusXBocca, radiusYBocca);
-		bocca.setFill(Color.PINK);
+		bocca.setFill(Color.SANDYBROWN);
 		//naso
 		Ellipse naso = new Ellipse(x, y+altezzaNaso, radiusXNaso, radiusYNaso);
 		naso.setFill(Color.BLACK);
