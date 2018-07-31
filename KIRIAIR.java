@@ -15,7 +15,6 @@ public class KIRIAIR extends Application {
 		//variabili ampiezza schermo
 		Double width = size * 8, height = size * 8;
 		Color c[] = {
-			Color.AQUA,	//colore eventuale sfondo
 			Color.PINK,
 			Color.MAROON,
 			Color.BLACK,
@@ -25,15 +24,15 @@ public class KIRIAIR extends Application {
 			Color.FUCHSIA
 		};
 		Integer kiria[][] = {
-			{2, 7, 2, 2, 2, 2, 2, 2},
-			{7, 2, 2, 1, 1, 2, 2, 2},
-			{2, 3, 3, 1, 1, 3, 3, 2},
-			{3, 4, 5, 1, 1, 5, 4, 3},
-			{1, 4, 3, 1, 1, 3, 4, 1},
-			{1, 1, 1, 1, 1, 1, 1, 1},
-			{1, 1, 1, 1, 1, 1, 1, 1},
-			{2, 1, 1, 6, 6, 1, 1, 2},
-		};
+                        {1, 6, 1, 1, 1, 1, 1, 1},
+                        {6, 1, 1, 0, 0, 1, 1, 1},
+                        {1, 2, 2, 0, 0, 2, 2, 1},
+                        {2, 3, 4, 0, 0, 4, 3, 2},
+                        {0, 3, 2, 0, 0, 2, 3, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0},
+                        {0, 0, 0, 0, 0, 0, 0, 0},
+                        {1, 0, 0, 5, 5, 0, 0, 1},
+                };
 		//Disegno del soggetto
 		Group root = new Group();
 		for(int i=0 ; i < 8 ; i++) {
@@ -46,7 +45,7 @@ public class KIRIAIR extends Application {
 
 		//Stampa tutto
 		Scene scene = new Scene(root , width, height);
-		primaryStage.setTitle("KIRIAIR EternaLove");
+		primaryStage.setTitle("KIRIAIR EternaLove fan-code by LLibera");
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}
